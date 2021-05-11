@@ -1,0 +1,29 @@
+.basic {
+  padding: 0;
+}
+
+.header {
+  padding-left: var(--sidebar-width);
+  box-shadow: var(--shadow);
+  background-color: var(--bs-white);
+  transition: padding-left 0.3s;
+}
+
+.content {
+  padding-left: var(--sidebar-width);
+  transition: padding-left 0.3s;
+}
+
+.content > div {
+  padding: 1rem;
+}
+
+.header.lg {
+  padding-left: var(--sidebar-width-mini);
+  transition: padding-left 0.3s;
+}
+
+.content.lg {
+  padding-left: var(--sidebar-width-mini);
+  transition: padding-left 0.3s;
+}

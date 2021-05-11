@@ -1,0 +1,71 @@
+.left-side {
+  width: var(--sidebar-width);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--bs-dark);
+  transition: width 0.3s;
+  overflow-y: auto;
+}
+
+.brand {
+  height: var(--header-height);
+  font-weight: bold;
+  color: var(--bs-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand:hover {
+  color: var(--bs-white);
+}
+
+.link {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  color: var(--bs-gray-500);
+}
+
+.link.active {
+  color: var(--bs-white);
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  color: var(--bs-white);
+  background-color: var(--bs-dark-hover);
+}
+.link .last-icon {
+  margin-left: auto;
+  transform: translateY(1px);
+}
+.sub-link .link {
+  padding-left: 2.7rem;
+}
+
+.text {
+  margin-left: 1rem;
+}
+
+.left-side.mini {
+  width: var(--sidebar-width-mini);
+  transition: width 0.3s;
+  overflow-y: unset;
+}
+.left-side.mini .brand {
+  font-size: 1rem;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+}
+.left-side.mini span {
+  display: none;
+}
+.left-side.mini .link {
+  margin-bottom: 0.6rem;
+}

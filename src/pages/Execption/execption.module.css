@@ -1,0 +1,14 @@
+.execption-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: calc(100vh / 6) !important;
+}
+
+.execption-card {
+  padding: 2rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+}

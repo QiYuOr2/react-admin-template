@@ -1,0 +1,11 @@
+.header-bar {
+  height: var(--header-height);
+}
+
+.content {
+  padding: 0 1.5rem;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
