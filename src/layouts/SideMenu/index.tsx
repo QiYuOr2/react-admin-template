@@ -16,6 +16,7 @@ interface IProps {
 const SideMenu: React.FC<IProps> = ({ routes }) => {
   const l = useLocation();
   const { appStore } = useStore();
+
   const collapse = useLocalObservable(() => ({
     activeCollapse: '',
     changeActiveCollapse(collapseKey: string) {
@@ -28,7 +29,7 @@ const SideMenu: React.FC<IProps> = ({ routes }) => {
   }));
 
   const renderLink = () =>
-    routes.map((r, i) =>
+    routes.map((r) =>
       r.children ? (
         <>
           <NavLink
@@ -48,8 +49,8 @@ const SideMenu: React.FC<IProps> = ({ routes }) => {
             className={styles['sub-link']}
             isOpen={collapse.activeCollapse === r.key}
           >
-            {r.children.map((subR, i) => (
-              <NavItem key={i}>
+            {r.children.map((subR) => (
+              <NavItem key={subR.key}>
                 <Link
                   className={composeClassName([
                     styles.link,
@@ -66,7 +67,7 @@ const SideMenu: React.FC<IProps> = ({ routes }) => {
           </Collapse>
         </>
       ) : (
-        <NavItem key={i}>
+        <NavItem key={r.key}>
           <Link
             className={composeClassName([
               styles.link,

@@ -1,0 +1,16 @@
+.basic-form {
+  margin: 1rem;
+  margin-bottom: 0;
+  padding: 2rem 8rem !important;
+}
+
+.basic-form .row {
+  margin-bottom: 1rem;
+}
+.basic-form .row:last-child {
+  margin-bottom: 0;
+}
+
+.basic-form .row .title {
+  margin-bottom: 0.5rem;
+}

@@ -7,6 +7,7 @@ import styles from './index.module.css';
 import useStore from '../../stores';
 import { composeClassName } from '../../utils/composeClassName';
 import { observer } from 'mobx-react';
+import Footer from '../Footer';
 
 const Basic: React.FC<RouterComponentProps> = ({ route, children }) => {
   const { appStore } = useStore();
@@ -28,6 +29,14 @@ const Basic: React.FC<RouterComponentProps> = ({ route, children }) => {
       >
         {children}
       </main>
+      <Footer
+        className={composeClassName([
+          styles.footer,
+          !appStore.isSidebarOpen ? styles.lg : '',
+        ])}
+      >
+        2021 © xmy6364
+      </Footer>
     </Container>
   );
 };

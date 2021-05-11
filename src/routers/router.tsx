@@ -5,6 +5,7 @@ import {
   ColumnsGap,
   ExclamationTriangle,
   PencilSquare,
+  Table,
 } from 'react-bootstrap-icons';
 
 export type RouterComponentProps = { route: RouterConfig };
@@ -45,7 +46,28 @@ const config: RouterConfig[] = [
             name: '表单页',
             key: 'form',
             icon: <PencilSquare />,
-            component: lazy(() => import('../pages/Form')),
+            children: [
+              {
+                path: '/form/basic',
+                name: '基础表单',
+                key: 'basicForm',
+                component: lazy(() => import('../pages/Form/BasicForm')),
+              },
+            ],
+          },
+          {
+            path: '/table',
+            name: '表格页',
+            key: 'table',
+            icon: <Table />,
+            children: [
+              {
+                path: '/table/simple',
+                name: '简单表格',
+                key: 'simpleTable',
+                component: lazy(() => import('../pages/Table/SimpleTable')),
+              },
+            ],
           },
           {
             path: '/exception',
